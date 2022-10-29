@@ -1,0 +1,30 @@
+{
+  "name": "create-tslb",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "exports": "./dist/index.js",
+  "bin": "./dist/bin.mjs",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "asd": "node dist/bin.mjs",
+    "typecheck": "tsc",
+    "test": "vitest",
+    "lint": "eslint --ignore-path .gitignore --max-warnings 0 .",
+    "format": "prettier --ignore-path .gitignore -w .",
+    "format:check": "prettier --ignore-path .gitignore -c ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "eslint": "^8.25.0",
+    "jiti": "^1.16.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4",
+    "vitest": "^0.24.3"
+  },
+  "dependencies": {
+    "commander": "^9.4.1"
+  }
+}
